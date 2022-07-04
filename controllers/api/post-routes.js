@@ -7,7 +7,7 @@ router.get("/", (req, res) => {
   console.log("======================");
   Post.findAll({
     attributes: ["id", "content", "title", "created_at"],
-    order: [["created_at", "DESC"]],
+    // order: [["created_at", "DESC"]],
     include: [
       {
         model: Comment,

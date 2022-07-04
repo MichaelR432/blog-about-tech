@@ -78,7 +78,8 @@ router.get('/create', withAuth, (req, res) => {
         where: {
             user_id: req.session.user_id
         },
-        attributes: ['id', 'post', 'title', 'created'],
+        attributes: ['id', 'content', 'title', 'created'],
+        // attributes: ['id', 'post', 'title', 'created'],
 
         include: [
             {
